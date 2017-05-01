@@ -15,11 +15,12 @@ class RolesController < ApplicationController
   end
 
   def edit_roles
-    @roles = Role.all
+    @roles = Role.active_roles
   end
 
   def update_roles
-    @roles = Role.all
+    @roles = Role.active_roles
+
     role_ids = params[:role]
     # raise params[:role].inspect
     # raise role_ids.inspect

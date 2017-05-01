@@ -19,7 +19,14 @@ class UsersController < ApplicationController
   end
 
   def index
-   @users = User.page(params[:page]).per(1)
+    # @users = User.all
+    # render json: @users.to_json
+   # @users = User.page(params[:page]).per(1)
+  end
+
+  def users_data
+    @users = User.all
+    render json: @users.to_json
   end
 
   def edit

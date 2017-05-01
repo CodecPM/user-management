@@ -7,6 +7,8 @@ UserManagement::Application.routes.draw do
   get '/edit-roles', :to => 'roles#edit_roles', :as => :edit_roles
   put '/update-roles', :to => 'roles#update_roles', :as => :update_roles
 
+  get '/users-data', :to => 'users#users_data'
+
   root :to => 'welcomes#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
