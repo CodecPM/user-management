@@ -1,0 +1,27 @@
+<section>
+	<div class="container">
+	<table class="table">
+	<thead>
+	<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>email</th>
+	<th>Role</th>
+	<th>Image</th>
+	</tr>
+	</thead>
+	<tbody>
+	<% @users.each do |user|%>
+	<tr>
+	<td><%= user.first_name%></td>
+	<td><%= user.last_name%></td>
+	<td><%= user.email%></td>
+	<td><%= user.role%></td>
+	<td style="height: 100px"><%= image_tag user.image %></td>
+	</tr>
+	<%end%>
+	</tbody>
+	</table>
+	<%= paginate @users, :theme => 'twitter-bootstrap-3' %>
+	</div>
+</section>

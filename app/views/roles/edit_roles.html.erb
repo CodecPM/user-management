@@ -1,0 +1,18 @@
+<section>
+	<div class="container">
+	<div class="row">
+	<div class="col-md-12">
+	<h3>Hide roles</h3>
+	<%= form_tag update_roles_path, method: :put do %>
+	<% @roles.each do |role| %>
+	<%= check_box_tag 'role[]', role.id %><%= role.name%><span class="space"></span>
+
+	<% end %>
+	<div class="form-group">
+	<%= submit_tag 'submit', :class => 'btn btn-primary'%>
+	</div>
+	<%end%>
+	</div>
+	</div>
+	</div>
+</section>
